@@ -21,4 +21,8 @@ public class DiceGame {
             turn++;
         }
     }
+
+    private static boolean winCheck(Player currentPlayer){
+        return currentPlayer.getPoints() >= 40;
+    }
 }
