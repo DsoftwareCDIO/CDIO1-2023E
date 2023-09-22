@@ -9,5 +9,16 @@ public class DiceGame {
         p2 = new Player();
         //d1 = new Die();
         //d2 = new Die();
+
+        Player currentPlayer = p1;
+        var turn = 1;
+        while (/*!winCheck()*/true){
+            currentPlayer = turn % 2 == 0 ? p2 : p1;
+            //d1.roll();
+            //d2.roll();
+            //Spiller får point
+            //Skifter tur
+            turn++;
+        }
     }
 }
