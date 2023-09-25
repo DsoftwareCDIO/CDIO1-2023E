@@ -6,8 +6,8 @@ public class DiceGame {
     static Die d1;
     static Die d2;
     public static void main(String[] args) throws Exception {
-        p1 = new Player();
-        p2 = new Player();
+        p1 = new Player("Player 1");
+        p2 = new Player("Player 2");
         d1 = new Die();
         d2 = new Die();
         var scanner = new java.util.Scanner(System.in);
@@ -19,7 +19,7 @@ public class DiceGame {
         var turn = 1;
         while (/* !winCheck() */true) {
             currentPlayer = turn % 2 == 0 ? p2 : p1;
-            System.out.println("Player " + currentPlayer.getName() + " har turen, tryk ENTER for at slå med terningerne");
+            System.out.println(currentPlayer.getName() + " har turen, tryk ENTER for at slå med terningerne");
             scanner.nextLine();
             //d1.roll();
             //d2.roll();
@@ -29,7 +29,7 @@ public class DiceGame {
             turn++;
         }
         
-        System.out.println("Tillykke " + currentPlayer.getName() + ", du har vundet spillet!");
+        //System.out.println("Tillykke " + currentPlayer.getName() + ", du har vundet spillet!");
 
         
     }
