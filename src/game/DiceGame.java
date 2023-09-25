@@ -42,4 +42,8 @@ public class DiceGame {
     // private boolean getEqual(){
 
     // }
+  
+    private static boolean winCheck(Player currentPlayer){
+        return currentPlayer.getPoints() >= 40;
+    }
 }
