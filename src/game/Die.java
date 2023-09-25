@@ -1,18 +1,23 @@
 package game;
+
 import java.util.Random;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Die {
-    public static int Dice() {
+    List<Integer> rolls = new ArrayList();
+
+    public void roll() {
         // init random
         Random random = new Random();
-        // add a random value to an int
-        int value = random.nextInt(1, 6);
-        // return the int "value"
-        return (value);
+        rolls.add(random.nextInt(1, 7));
     }
 
-    public static void main(String[] args) {
-        // temp. test to see if the dice mechanic works
-        System.out.println(Dice());
+    public int preRoll() {
+        return (rolls.get(rolls.size() - 2));
+    }
+
+    public int getFaceValue() {
+        return (rolls.get(rolls.size() - 1));
     }
 }
