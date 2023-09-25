@@ -24,10 +24,11 @@ public class DiceGame {
         }
     }
 
+    // method to get the sum of the two dice thowed this turn
     private int getSum(Die d1, Die d2) {
         return (d1.getFaceValue() + d2.getFaceValue());
     }
-
+    // method to check if the to dice in this throw id equal
     // private boolean getEqual(){
 
     // }
