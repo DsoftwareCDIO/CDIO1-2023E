@@ -24,6 +24,7 @@ public class DiceGame {
             d1.roll();
             d2.roll();
             //Spiller får point
+            currentPlayer.addPoints(getSum(d1, d2));
             //Skifter tur
             System.out.println("Der blev slået " + d1.getFaceValue() + " og " + d2.getFaceValue() + ", du har nu " + currentPlayer.getPoints() + " point");
             turn++;
@@ -35,7 +36,7 @@ public class DiceGame {
     }
 
     // method to get the sum of the two dice thowed this turn
-    private int getSum(Die d1, Die d2) {
+    private static int getSum(Die d1, Die d2) {
         return (d1.getFaceValue() + d2.getFaceValue());
     }
     // method to check if the to dice in this throw id equal
