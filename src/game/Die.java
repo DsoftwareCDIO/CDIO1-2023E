@@ -1,6 +1,7 @@
+package game;
 import java.util.Random;
 
-public class Dice {
+public class Die {
     public static int Dice() {
         // init random
         Random random = new Random();
