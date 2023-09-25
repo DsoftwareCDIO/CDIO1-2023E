@@ -1,6 +1,11 @@
 package game;
 public class Player {
     private int points;
+    private String name;
+
+    public Player(String name){
+        this.name = name;
+    }
 
     public int getPoints(){
         return points;
@@ -8,5 +13,9 @@ public class Player {
     
     public void addPoints(int points){
         this.points += points;
+    }
+
+    public String getName(){
+        return name;
     }
 }
