@@ -1,4 +1,5 @@
 package game;
+
 public class DiceGame {
     static Player p1;
     static Player p2;
@@ -16,7 +17,7 @@ public class DiceGame {
         System.out.println("Velkommen til terningespillet");
         Player currentPlayer = p1;
         var turn = 1;
-        while (/*!winCheck()*/true){
+        while (/* !winCheck() */true) {
             currentPlayer = turn % 2 == 0 ? p2 : p1;
             System.out.println("Player " + currentPlayer.getName() + " har turen, tryk ENTER for at slå med terningerne");
             scanner.nextLine();
@@ -32,4 +33,13 @@ public class DiceGame {
 
         
     }
+
+    // method to get the sum of the two dice thowed this turn
+    private int getSum(Die d1, Die d2) {
+        return (d1.getFaceValue() + d2.getFaceValue());
+    }
+    // method to check if the to dice in this throw id equal
+    // private boolean getEqual(){
+
+    // }
 }
