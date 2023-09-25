@@ -21,8 +21,8 @@ public class DiceGame {
             currentPlayer = turn % 2 == 0 ? p2 : p1;
             System.out.println(currentPlayer.getName() + " har turen, tryk ENTER for at slå med terningerne");
             scanner.nextLine();
-            //d1.roll();
-            //d2.roll();
+            d1.roll();
+            d2.roll();
             //Spiller får point
             //Skifter tur
             System.out.println("Der blev slået " + d1.getFaceValue() + " og " + d2.getFaceValue() + ", du har nu " + currentPlayer.getPoints() + " point");
