@@ -36,7 +36,7 @@ public class DiceGame {
         }
 
         // Congratulates the winner, when the game ends
-        System.out.println("\nCongratulations  " + currentPlayer.getName() + ", you won the game!");
+        System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
     }
 
     // Method to get the sum of the two dice thrown this turn
