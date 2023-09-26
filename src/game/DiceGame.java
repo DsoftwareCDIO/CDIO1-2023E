@@ -45,12 +45,12 @@ public class DiceGame {
         return (d1.getFaceValue() + d2.getFaceValue());
     }
 
-    // method to check if the to dice in this throw is equal
+    // Method to check if the two dice in this throw is equal
     private boolean getEqual(Die d1, Die d2) {
         return d1 == d2;
     }
 
-    // Checks wthether a player has won the game
+    // Checks whether a player has won the game
     private static boolean winCheck(Player currentPlayer) {
         return currentPlayer.getPoints() >= 40;
     }
