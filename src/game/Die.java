@@ -11,8 +11,9 @@ public class Die {
     public void roll() {
         // init random
         Random random = new Random();
-        // get random num between 0 (inclusive) and 6 (exclusive), adds 1 to get range for 6-sided die
-        rolls.add(random.nextInt(6)+1);
+        // get random num between 0 (inclusive) and 6 (exclusive), adds 1 to get range
+        // for 6-sided die
+        rolls.add(random.nextInt(6) + 1);
     }
 
     // method to get the previous rolls value
