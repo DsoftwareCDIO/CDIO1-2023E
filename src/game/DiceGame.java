@@ -20,7 +20,7 @@ public class DiceGame {
         Player currentPlayer = p1;
         var turn = 1;
         // When a player wins, the while loop stops running
-        while (!winCheck(currentPlayer)) {
+        while (!winCheck(currentPlayer, d1, d2)) {
             // Set currentplayer depending on turn
             currentPlayer = turn % 2 == 0 ? p2 : p1;
             System.out.print("\n" + currentPlayer.getName() + "'s turn, press ENTER to roll the dice");
@@ -51,7 +51,11 @@ public class DiceGame {
     }
 
     // Checks wthether a player has won the game
-    private static boolean winCheck(Player currentPlayer) {
-        return currentPlayer.getPoints() >= 40;
+    private static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
+
+        if (currentPlayer.getPoints() >= 40 && getEqual(d1, d2) == true) {
+            return (true);
+        } else
+            return (false);
     }
 }
