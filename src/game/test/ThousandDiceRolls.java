@@ -1,9 +1,10 @@
 package game.test;
 import game.main.Die;
 
-
+import org.junit.Test;
 public class ThousandDiceRolls {
-    public static void main(String[] args) {
+    @Test
+    public void RollDice() {
         int sum = 0;
         Die d1 = new Die();
         Die d2 = new Die();
