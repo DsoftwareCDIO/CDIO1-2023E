@@ -52,6 +52,7 @@ public class DiceGame {
 
     // Checks wthether a player has won the game
     private static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
-        return (currentPlayer.getPoints() >= 40 && getEqual(d1, d2));
+        //return (currentPlayer.getPoints() >= 40 && getEqual(d1, d2));
+        return (currentPlayer.getPoints() >= 40 );
     }
 }
