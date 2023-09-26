@@ -23,7 +23,7 @@ public class DiceGame {
         while (!winCheck(currentPlayer)) {
             // Set currentplayer depending on turn
             currentPlayer = turn % 2 == 0 ? p2 : p1;
-            System.out.print("\n" + currentPlayer.getName() + "'s turn', press ENTER to roll the dice");
+            System.out.print("\n" + currentPlayer.getName() + "'s turn, press ENTER to roll the dice");
             scanner.nextLine();
 
             d1.roll();
@@ -34,9 +34,10 @@ public class DiceGame {
                     + currentPlayer.getPoints() + " points");
             turn++;
         }
+        scanner.close();
 
         // Congratulates the winner, when the game ends
-        System.out.println("\nCongratulations  " + currentPlayer.getName() + ", you won the game!");
+        System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
     }
 
     // Method to get the sum of the two dice thrown this turn
