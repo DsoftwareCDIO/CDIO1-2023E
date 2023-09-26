@@ -46,16 +46,12 @@ public class DiceGame {
     }
 
     // method to check if the to dice in this throw is equal
-    private boolean getEqual(Die d1, Die d2) {
+    private static boolean getEqual(Die d1, Die d2) {
         return d1 == d2;
     }
 
     // Checks wthether a player has won the game
     private static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
-
-        if (currentPlayer.getPoints() >= 40 && getEqual(d1, d2) == true) {
-            return (true);
-        } else
-            return (false);
+        return (currentPlayer.getPoints() >= 40 && getEqual(d1, d2));
     }
 }
