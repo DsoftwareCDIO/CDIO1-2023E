@@ -1,4 +1,5 @@
 package game;
+import java.util.Scanner;
 
 public class DiceGame {
     static Player p1;
@@ -12,13 +13,13 @@ public class DiceGame {
         p2 = new Player("Player 2");
         d1 = new Die();
         d2 = new Die();
-        var scanner = new java.util.Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         scanner.useLocale(java.util.Locale.ENGLISH);
 
         // The game starts
         System.out.println("Welcome to the Dice Game");
         Player currentPlayer = p1;
-        var turn = 1;
+        int turn = 1;
         // When a player wins, the while loop stops running
         while (!winCheck(currentPlayer)) {
             // Set currentplayer depending on turn
