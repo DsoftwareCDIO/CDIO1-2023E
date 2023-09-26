@@ -43,10 +43,11 @@ public class DiceGame {
     private static int getSum(Die d1, Die d2) {
         return (d1.getFaceValue() + d2.getFaceValue());
     }
-    // method to check if the to dice in this throw id equal
-    // private boolean getEqual(){
 
-    // }
+    // method to check if the to dice in this throw is equal
+    private boolean getEqual(Die d1, Die d2) {
+        return d1 == d2;
+    }
 
     // Checks wthether a player has won the game
     private static boolean winCheck(Player currentPlayer) {
