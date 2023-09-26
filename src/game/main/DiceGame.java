@@ -1,4 +1,4 @@
-package main.game;
+package game.main;
 import java.util.Scanner;
 
 public class DiceGame {

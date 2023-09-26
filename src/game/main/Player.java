@@ -1,4 +1,4 @@
-package main.game;
+package game.main;
 
 public class Player {
     private int points;
