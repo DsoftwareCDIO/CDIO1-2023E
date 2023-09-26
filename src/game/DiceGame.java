@@ -19,7 +19,7 @@ public class DiceGame {
         var turn = 1;
         while (!winCheck(currentPlayer)) {
             currentPlayer = turn % 2 == 0 ? p2 : p1;
-            System.out.println("\n" + currentPlayer.getName() + " har turen, tryk ENTER for at slå med terningerne");
+            System.out.print("\n" + currentPlayer.getName() + " har turen, tryk ENTER for at slå med terningerne");
             scanner.nextLine();
             d1.roll();
             d2.roll();
