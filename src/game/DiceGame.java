@@ -34,7 +34,8 @@ public class DiceGame {
                     + currentPlayer.getPoints() + " points");
             turn++;
         }
-
+        scanner.close();
+        
         // Congratulates the winner, when the game ends
         System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
     }
