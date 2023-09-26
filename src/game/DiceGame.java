@@ -23,7 +23,7 @@ public class DiceGame {
         while (!winCheck(currentPlayer)) {
             // Set currentplayer depending on turn
             currentPlayer = turn % 2 == 0 ? p2 : p1;
-            System.out.print("\n" + currentPlayer.getName() + "'s turn', press ENTER to roll the dice");
+            System.out.print("\n" + currentPlayer.getName() + "'s turn, press ENTER to roll the dice");
             scanner.nextLine();
 
             d1.roll();
