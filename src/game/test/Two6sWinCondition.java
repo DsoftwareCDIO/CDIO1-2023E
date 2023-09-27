@@ -1,5 +1,4 @@
 package game.test;
-import game.main.DiceGame;
 import game.main.Player;
 
 import org.junit.Test;
