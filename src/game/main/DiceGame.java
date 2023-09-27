@@ -64,9 +64,4 @@ public class DiceGame {
     private static boolean getEqual(Die d1, Die d2) {
         return d1.getFaceValue() == d2.getFaceValue();
     }
-
-    // Checks wthether a player has won the game
-    private static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
-        return (currentPlayer.getPoints() >= 40 && getEqual(d1, d2));
-    }
 }
