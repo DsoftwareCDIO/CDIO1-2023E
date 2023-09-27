@@ -33,6 +33,15 @@ public class DiceGame {
             currentPlayer.addPoints(getSum(d1, d2));
             System.out.println("You rolled " + d1.getFaceValue() + " and " + d2.getFaceValue() + ", you now have "
                     + currentPlayer.getPoints() + " points");
+<<<<<<< HEAD
+=======
+            }
+
+            if (getEqual(d1, d2) && currentPlayer.getPoints() < 40) {
+                turn--;
+                System.out.println("You rolled two of a kind, so you get an extra turn");
+            }
+>>>>>>> dev
             turn++;
         }
 
@@ -46,6 +55,21 @@ public class DiceGame {
     private static int getSum(Die d1, Die d2) {
         return (d1.getFaceValue() + d2.getFaceValue());
     }
+<<<<<<< HEAD
+=======
+    
+    // Checks whether a player has won the game
+    public static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
+        if (currentPlayer.getPoints() >= 40 && getEqual(d1, d2)) {
+            return true;
+        }
+        if (getSum(d1, d2) == 12 && d1.preRoll() == 6 && d2.preRoll() == 6) {
+            System.out.println("You rolled two 6's two times in a row");
+            return true;
+        }
+        return false;
+    }
+>>>>>>> dev
 
     // Checks whether a player has won the game
     private static boolean winCheck(Player currentPlayer) {
