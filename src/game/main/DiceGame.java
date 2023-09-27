@@ -38,7 +38,7 @@ public class DiceGame {
                     + currentPlayer.getPoints() + " points");
             }
 
-            if (getEqual(d1, d2)) {
+            if (getEqual(d1, d2) && currentPlayer.getPoints() < 40) {
                 turn--;
                 System.out.println("You rolled two of a kind, so you get an extra turn");
             }
@@ -58,7 +58,7 @@ public class DiceGame {
     
     // Checks whether a player has won the game
     public static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
-        if (currentPlayer.getPoints() >= 40) {
+        if (currentPlayer.getPoints() >= 40 && getEqual(d1, d2)) {
             return true;
         }
         if (getSum(d1, d2) == 12 && d1.preRoll() == 6 && d2.preRoll() == 6) {
