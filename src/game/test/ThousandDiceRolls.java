@@ -4,7 +4,7 @@ import game.main.Die;
 import org.junit.Test;
 public class ThousandDiceRolls {
     @Test
-    public void RollDice() {
+    public void rollDice() {
         int sum = 0;
         Die d1 = new Die();
         Die d2 = new Die();
