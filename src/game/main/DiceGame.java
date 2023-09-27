@@ -14,7 +14,6 @@ public class DiceGame {
         d1 = new Die();
         d2 = new Die();
         Scanner scanner = new Scanner(System.in);
-        scanner.useLocale(java.util.Locale.ENGLISH);
 
         // The game starts
         System.out.println("Welcome to the Dice Game");
@@ -55,5 +54,14 @@ public class DiceGame {
     // Checks whether a player has won the game
     private static boolean winCheck(Player currentPlayer) {
         return currentPlayer.getPoints() >= 40;
+  
+    // method to check if the to dice in this throw is equal
+    private static boolean getEqual(Die d1, Die d2) {
+        return d1 == d2;
+    }
+
+    // Checks wthether a player has won the game
+    private static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
+        return (currentPlayer.getPoints() >= 40 && getEqual(d1, d2));
     }
 }
