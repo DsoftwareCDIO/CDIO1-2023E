@@ -26,7 +26,7 @@ public class Player {
     }
 
     // Set players points to zero
-    public void resetPoints(int points) {
-        this.points = points;
+    public void resetPoints() {
+        this.points = 0;
     }
 }

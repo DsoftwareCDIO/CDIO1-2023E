@@ -30,7 +30,7 @@ public class DiceGame {
             d2.roll();
             // Checks if roll is double ones and current player gets points
             if (getSum(d1, d2) == 2){
-                currentPlayer.resetPoints(0);
+                currentPlayer.resetPoints();
                 System.out.println("You rolled double ones. You now have " + currentPlayer.getPoints() + " points");
             } else {
                 currentPlayer.addPoints(getSum(d1, d2));
@@ -54,7 +54,7 @@ public class DiceGame {
     // Checks whether a player has won the game
     private static boolean winCheck(Player currentPlayer) {
         return currentPlayer.getPoints() >= 40;
-  
+    }
     // method to check if the to dice in this throw is equal
     private static boolean getEqual(Die d1, Die d2) {
         return d1 == d2;
