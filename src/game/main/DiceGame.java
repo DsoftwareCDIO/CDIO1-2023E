@@ -35,10 +35,11 @@ public class DiceGame {
                     + currentPlayer.getPoints() + " points");
             turn++;
         }
-        scanner.close();
 
         // Congratulates the winner, when the game ends
         System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
+        scanner.nextLine();
+        scanner.close();
     }
 
     // Method to get the sum of the two dice thrown this turn
