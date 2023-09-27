@@ -37,6 +37,11 @@ public class DiceGame {
                 System.out.println("You rolled " + d1.getFaceValue() + " and " + d2.getFaceValue() + ", you now have "
                     + currentPlayer.getPoints() + " points");
             }
+
+            if (getEqual(d1, d2)) {
+                turn--;
+                System.out.println("You rolled two of a kind. You now have " + currentPlayer.getPoints() + " points, and it's your turn again");
+            }
             turn++;
         }
 
