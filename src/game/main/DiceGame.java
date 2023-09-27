@@ -20,7 +20,7 @@ public class DiceGame {
         Player currentPlayer = p1;
         int turn = 1;
         // When a player wins, the while loop stops running
-        while (!winCheck(currentPlayer)) {
+        do {
             // Set currentplayer depending on turn
             currentPlayer = turn % 2 == 0 ? p2 : p1;
             System.out.print("\n" + currentPlayer.getName() + "'s turn, press ENTER to roll the dice");
@@ -43,7 +43,7 @@ public class DiceGame {
                 System.out.println("You rolled two of a kind, so you get an extra turn");
             }
             turn++;
-        }
+        } while (!winCheck(currentPlayer, d1, d2));
 
         // Congratulates the winner, when the game ends
         System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
@@ -55,11 +55,19 @@ public class DiceGame {
     private static int getSum(Die d1, Die d2) {
         return (d1.getFaceValue() + d2.getFaceValue());
     }
-
+    
     // Checks whether a player has won the game
-    private static boolean winCheck(Player currentPlayer) {
-        return currentPlayer.getPoints() >= 40;
+    public static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
+        if (currentPlayer.getPoints() >= 40) {
+            return true;
+        }
+        if (getSum(d1, d2) == 12 && d1.preRoll() == 6 && d2.preRoll() == 6) {
+            System.out.println("You rolled two 6's two times in a row");
+            return true;
+        }
+        return false;
     }
+
     // method to check if the to dice in this throw is equal
     private static boolean getEqual(Die d1, Die d2) {
         return d1.getFaceValue() == d2.getFaceValue();
