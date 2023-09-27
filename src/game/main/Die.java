@@ -1,4 +1,4 @@
-package game.main;
+package game;
 
 import java.util.Random;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Die {
     // Init list to store values of rolls in
-    private List<Integer> rolls = new ArrayList<>();
+    List<Integer> rolls = new ArrayList();
 
     public void roll() {
         // Init random

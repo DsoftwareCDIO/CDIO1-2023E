@@ -1,4 +1,4 @@
-package game.main;
+package game;
 
 public class Player {
     private int points;
@@ -23,10 +23,5 @@ public class Player {
     // Get name of player for game output
     public String getName() {
         return name;
-    }
-
-    // Set players points to zero
-    public void resetPoints(int points) {
-        this.points = points;
     }
 }
