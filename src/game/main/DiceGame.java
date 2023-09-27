@@ -1,4 +1,4 @@
-package game;
+package game.main;
 
 public class DiceGame {
     static Player p1;
