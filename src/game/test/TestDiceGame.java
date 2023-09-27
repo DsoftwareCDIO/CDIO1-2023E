@@ -1,18 +1,19 @@
-package game.main;
+package game.test;
+import game.main.Player;
 import java.util.Scanner;
 
-public class DiceGame {
+public class TestDiceGame {
     static Player p1;
     static Player p2;
-    static Die d1;
-    static Die d2;
+    static TestDie d1;
+    static TestDie d2;
 
     public static void main(String[] args) throws Exception {
         // Instantiates 2 object of class Player and of class Die
         p1 = new Player("Player 1");
         p2 = new Player("Player 2");
-        d1 = new Die();
-        d2 = new Die();
+        d1 = new TestDie();
+        d2 = new TestDie();
         Scanner scanner = new Scanner(System.in);
 
         // The game starts
@@ -52,12 +53,12 @@ public class DiceGame {
     }
 
     // Method to get the sum of the two dice thrown this turn
-    private static int getSum(Die d1, Die d2) {
+    private static int getSum(TestDie d1, TestDie d2) {
         return (d1.getFaceValue() + d2.getFaceValue());
     }
     
     // Checks whether a player has won the game
-    public static boolean winCheck(Player currentPlayer, Die d1, Die d2) {
+    public static boolean winCheck(Player currentPlayer, TestDie d1, TestDie d2) {
         if (currentPlayer.getPoints() >= 40) {
             return true;
         }
@@ -69,7 +70,7 @@ public class DiceGame {
     }
 
     // method to check if the to dice in this throw is equal
-    private static boolean getEqual(Die d1, Die d2) {
+    private static boolean getEqual(TestDie d1, TestDie d2) {
         return d1.getFaceValue() == d2.getFaceValue();
     }
 }
