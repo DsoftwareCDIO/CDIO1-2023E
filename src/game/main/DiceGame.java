@@ -40,7 +40,7 @@ public class DiceGame {
 
             if (getEqual(d1, d2)) {
                 turn--;
-                System.out.println("You rolled two of a kind. You now have " + currentPlayer.getPoints() + " points, and it's your turn again");
+                System.out.println("You rolled two of a kind, so you get an extra turn");
             }
             turn++;
         }
@@ -62,7 +62,7 @@ public class DiceGame {
     }
     // method to check if the to dice in this throw is equal
     private static boolean getEqual(Die d1, Die d2) {
-        return d1 == d2;
+        return d1.getFaceValue() == d2.getFaceValue();
     }
 
     // Checks wthether a player has won the game
