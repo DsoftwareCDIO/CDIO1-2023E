@@ -24,4 +24,9 @@ public class Player {
     public String getName() {
         return name;
     }
+
+    // Set players points to zero
+    public void resetPoints(int points) {
+        this.points = points;
+    }
 }

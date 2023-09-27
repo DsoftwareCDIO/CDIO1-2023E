@@ -29,10 +29,15 @@ public class DiceGame {
 
             d1.roll();
             d2.roll();
-            // Current player gets points
-            currentPlayer.addPoints(getSum(d1, d2));
-            System.out.println("You rolled " + d1.getFaceValue() + " and " + d2.getFaceValue() + ", you now have "
+            // Checks if roll is double ones and current player gets points
+            if (getSum(d1, d2) == 2){
+                currentPlayer.resetPoints(0);
+                System.out.println("You rolled double ones. You now have " + currentPlayer.getPoints() + " points");
+            } else {
+                currentPlayer.addPoints(getSum(d1, d2));
+                System.out.println("You rolled " + d1.getFaceValue() + " and " + d2.getFaceValue() + ", you now have "
                     + currentPlayer.getPoints() + " points");
+            }
             turn++;
         }
 
