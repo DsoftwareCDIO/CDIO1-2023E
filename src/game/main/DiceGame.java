@@ -38,6 +38,7 @@ public class DiceGame {
                     + currentPlayer.getPoints() + " points");
             }
 
+            // Give extra turn when rolling two similar
             if (getEqual(d1, d2) && currentPlayer.getPoints() < 40) {
                 turn--;
                 System.out.println("You rolled two of a kind, so you get an extra turn");
