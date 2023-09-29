@@ -18,7 +18,7 @@ public class DiceGame {
         // The game starts
         System.out.println("Welcome to the Dice Game");
         System.out.println("First to get two of a kind with 40 or more points win");
-        System.out.println("Two of a kind gives an extra turn, but to 1's resets your points");
+        System.out.println("Two of a kind gives an extra turn, but two 1's resets your points");
         System.out.println("A pair of 6's two times in a row also wins the game");
         Player currentPlayer = p1;
         int turn = 1;
